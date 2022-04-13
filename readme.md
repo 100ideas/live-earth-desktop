@@ -78,13 +78,74 @@ error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPAT
   - tidy up install process and use virtualenv 
   - ditch/replace bloat deps like cv2 (opencv for jpg stitching and saving ugh)
 - or deno/node 
-  - https://github.com/jeremiak/noaa-goes-east-image-scraper/blob/master/scrape.js
+  - prior art:
+    - https://github.com/jeremiak/noaa-goes-east-image-scraper/blob/master/scrape.js
+    - https://github.com/maxogden/goes-16-cira-geocolor/blob/master/run.sh
+- or this mature-looking GOES scraper written in kotlin / java
+  - https://github.com/n9Mtq4/NOAA-GOES-Image-Scraper
 - use apple automations / applescript / or some system api to directly control screensaver / background
 - refactor hardcoded config strings (paths) into config vars
 - maybe port over to serverless architecture + s3, provide proxy?
-- 
+- fix up goes-movie.py
+
+
+## feature: movie mode, *animate-earth* codebase w/ "morphing" between frames
+
+I made this comment back in 2017 on maxogdens GOES scraper repo (https://github.com/maxogden/goes-16-cira-geocolor/issues/2). Unfortunately animate-earth codebase is 7 years old now...
+
+> The following project may be of some interest: @dandelany[/animate-earth](https://github.com/dandelany/animate-earth)
+> 
+> ![](https://camo.githubusercontent.com/d13dc1418d1ebacd0e070c20e69b77b6a40d300a/687474703a2f2f692e696d6775722e636f6d2f5452454d7a684e2e676966)
+> 
+> > [animate-earth](https://github.com/dandelany/animate-earth) is an experiment in applying optical-flow-based motion interpolation to processed RGB satellite imagery from Himawari-8's AHI imager, with the aim of regularly producing high-quality smoothed videos from these images, and sharing them with the world. [The final products can be found on this Youtube channel](https://www.youtube.com/embed/8knZ2-cys6M?list=PLrmCQL5hELCx-9utf0HXyXuBuc1IIPIJQ), updated nearly daily.
+> > 
+> > Motion interpolation is accomplished with the open source [Butterflow tool by dthpham](https://github.com/dthpham/butterflow)), which uses [OpenCV’s implementation](http://docs.opencv.org/master/d7/d8b/tutorial_py_lucas_kanade.html#gsc.tab=0) of an algorithm devised by Gunnar Farnebäck.
+> >
+> >  > Farnebäck, Gunnar. "Two-frame motion estimation based on polynomial expansion." Image analysis (2003): 363-370. [archive.org pdf](https://web.archive.org/web/20170829054040/http://www.diva-portal.org/smash/get/diva2:273847/FULLTEXT01.pdf).
+
+also intersting: stabilizing location of the terminator in the frame over a very long timelapse (month+): https://www.youtube.com/shorts/6GaQAitlH4M
+
+Will Bresnahan (https://github.com/n9Mtq4)has shared some even smoother timelaps animations from goes full-disk images: https://www.youtube.com/watch?v=HEgQXcmLj-E. He wrote a mature-looking scraper in kotlin. https://github.com/n9Mtq4/NOAA-GOES-Image-Scraper
+
+**very interesting**: https://github.com/celoyd/hi8 - repo that generates "https://glittering.blue" movies from himawari-8 raw data.
+
+check out
+- original repo https://github.com/celoyd/hi8
+- https://github.com/n9Mtq4/NOAA-GOES-Image-Scraper
+- https://github.com/100ideas/live-earth-desktop
+- https://github.com/dandelany/animate-earth
+- https://github.com/dthpham/butterflow
+
+interesting people
+- https://github.com/celoyd
+- https://github.com/n9Mtq4
+- https://github.com/dandelany
+
+
+### a js scraper written by maxogden
+
+```shell
+# scraper written by maxogden
+# https://github.com/maxogden/goes-16-cira-geocolor/blob/master/run.sh
+
+node index.js # downloads latest
+find . -name "*.png" -size -1k -delete # if last ran exited w/ half written files
+ls images | xargs -I {} sh -c "if [ ! -f renders/{}.png ]; then montage images/{}/*.png -tile 3x3 -geometry +0+0 -background none renders/{}.png; fi"
+for f in renders/*.png; do
+  filename=$(basename $f .JPG)
+  if [ ! -f overlay/$filename ]; then
+    convert $f -fill white -pointsize 30 -gravity NorthWest -draw "text 10,10 '$(node date.js $filename)'" -pointsize 20 -draw "text 10,50 'CIRA GeoColor, NASA GOES-16 Satellite'" overlay/$filename
+  fi;
+done
+rm -rf movietmp
+mkdir movietmp
+ls overlay | tail -n -96 | xargs -I {} cp overlay/{} movietmp # only build last 96 (last 24 hours worth)
+ffmpeg -y -r 5 -pattern_type glob -i 'movietmp/*.png' -vf scale=2034:-1 -vcodec libx264 -crf 25 output/24hrs.mp4
+```
 
 ---
+
+# original readme content
 
 **UPDATE: GOES-East now supported instead of Himawari.** Use https://github.com/jakiestfu/himawari.js for Himawari images instead of this. Something has changed about where the Himawari images are saved, and I don't want to spend time tracking it down when there's a perfectly great package already. You can use his script via `launchctl` the same way you can this one in order to get continually-updated images for your desktop. GOES-East is still supported in this package.
 
