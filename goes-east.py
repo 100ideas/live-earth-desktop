@@ -26,7 +26,12 @@ Image.MAX_IMAGE_PIXELS = None
 
 
 def get_image_link():
-    page = requests.get('https://www.star.nesdis.noaa.gov/GOES/GOES16_FullDisk.php')
+    # GOES-East
+    # page = requests.get('https://www.star.nesdis.noaa.gov/GOES/GOES16_FullDisk.php')
+    
+    # GOES-West
+    page = requests.get('https://www.star.nesdis.noaa.gov/GOES/fulldisk.php?sat=G17')
+    
     raw_html = page.content
     html = BeautifulSoup(raw_html, "lxml")
 
@@ -72,7 +77,7 @@ def print_image_time(link):
     local_time = utcmoment.astimezone(tzlocal.get_localzone())
     print(":earth_americas: {:%I:%M}".format(local_time))
 
-base_dir = '/Users/willw/code/live-earth-desktop/'
+base_dir = '/Users/100ideas/Pictures/live-earth-desktop/'
 tmp = base_dir + 'tmp.jpg'
 out_dir = base_dir + 'images/'
 archive_dir = base_dir + 'old_images/'
@@ -80,6 +85,7 @@ archive_dir = base_dir + 'old_images/'
 def exists(img_name):
     for f in os.listdir(out_dir):
         if f.startswith(img_name[:11]):
+            print('... image already downloaded: ' + img_name[:11])
             return True
     return False
 
@@ -106,8 +112,8 @@ def fetch_and_set():
         cv2.imwrite(tmp, img)
 
         # clear out the old images in this folder so the OS picks the right one
-        # os.system("mv {} {}".format(out_dir + '*', archive_dir))
-        os.system("rm {}".format(out_dir + '*'))
+        os.system("mv {} {}".format(out_dir + '*', archive_dir))
+        # os.system("rm {}".format(out_dir + '*'))
 
         # now move in the new image. doing it like this because writing the image
         # takes a while, so it's better to make it a (semi-) atomic swap

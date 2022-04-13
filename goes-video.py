@@ -81,7 +81,7 @@ def print_image_time(link):
     local_time = utcmoment.astimezone(tzlocal.get_localzone())
     print(":earth_americas: {:%I:%M}".format(local_time))
 
-base_dir = '/Users/willw/code/live-earth-desktop/'
+base_dir = '/Users/100ideas/Pictures/live-earth-desktop/'
 tmp = base_dir + 'tmp.jpg'
 out_dir = base_dir + 'images/'
 archive_dir = base_dir + 'old_images/'

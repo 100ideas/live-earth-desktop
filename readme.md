@@ -1,5 +1,36 @@
 # live-earth-desktop
 
+## INSTALL LOG (100ideas)
+
+using system default python2.7
+
+consider putting these requirements in a `requirements.txt` for pip... see here
+- https://pip.pypa.io/en/stable/user_guide/#requirements-files
+
+```shell
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python
+
+python -m pip install requests lxml html5lib
+python -m pip install scikit-image
+python -m pip pip install opencv-python==4.2.0.32
+
+
+
+
+```
+
+need to install opencv-python and cv2
+
+... which needs opencv binary library to be added to python.. see gist
+https://gist.github.com/shinsumicco/52bfcabeccb0290348feee48cd5dcdb9
+
+... the gist suggests an involved compile from src w/ flags for oldy python...
+
+... gonna just try `brew install opencv@2` instead
+
+
+---
+
 **UPDATE: GOES-East now supported instead of Himawari.** Use https://github.com/jakiestfu/himawari.js for Himawari images instead of this. Something has changed about where the Himawari images are saved, and I don't want to spend time tracking it down when there's a perfectly great package already. You can use his script via `launchctl` the same way you can this one in order to get continually-updated images for your desktop. GOES-East is still supported in this package.
 
 There's a satellite called Himawari-8 which is geostationary over approximately Papua New Guinea. The very excellent people who run this satellite have set up a [live stream](http://himawari8.nict.go.jp/) of the ultra-high-res images that it takes. They are gorgeous.

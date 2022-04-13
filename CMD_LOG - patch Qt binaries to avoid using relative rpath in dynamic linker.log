@@ -1,0 +1,1798 @@
+was getting errors below every time program ran (python goes-east.py) saved to out.log
+
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtTest being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtTest being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+rm: /Users/100ideas/Pictures/live-earth-desktop/images/*: No such file or directory
+
+
+
+#################################
+
+
+
+
+Last login: Wed Apr 13 07:27:49 on ttys000
+ _____________________________________________
+< And now for something completely different. >
+ ---------------------------------------------
+  \
+   \          .
+       ___   //
+     {~._.~}//
+      ( Y )K/
+     ()~*~()
+     (_)-(_)
+     Luke
+     Sywalker
+     koala
+Welcome to fish, the friendly interactive shell
+
+~/dev ❯ install_name_tool --help                                                  09:03:47
+Usage: /Library/Developer/CommandLineTools/usr/bin/install_name_tool [-change old new] ... [-rpath old new] ... [-add_rpath new] ... [-delete_rpath old] ... [-id name] input
+
+~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/cv2.so
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/cv2.so:
+	@loader_path/.dylibs/libavcodec.58.54.100.dylib (compatibility version 58.0.0, current version 58.54.100)
+	@loader_path/.dylibs/libavformat.58.29.100.dylib (compatibility version 58.0.0, current version 58.29.100)
+	@loader_path/.dylibs/libavutil.56.31.100.dylib (compatibility version 56.0.0, current version 56.31.100)
+	@loader_path/.dylibs/libswscale.5.5.100.dylib (compatibility version 5.0.0, current version 5.5.100)
+	@loader_path/.dylibs/libavresample.4.0.0.dylib (compatibility version 4.0.0, current version 4.0.0)
+	/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa (compatibility version 1.0.0, current version 22.0.0)
+	/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate (compatibility version 1.0.0, current version 4.0.0)
+	/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation (compatibility version 1.0.0, current version 2.0.0)
+	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 1161.10.0)
+	/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 1.5.0)
+	/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore (compatibility version 1.2.0, current version 1.11.0)
+	@loader_path/.dylibs/QtWidgets (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtGui (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtTest (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtConcurrent (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtCore (compatibility version 5.13.0, current version 5.13.2)
+	/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL (compatibility version 1.0.0, current version 1.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.0)
+	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1452.23.0)
+	/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1452.23.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+
+~/dev ❯ man pip                                                                                                            09:08:12
+No manual entry for pip
+
+~/dev ❯ ls /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent                     [ERROR]09:12:00
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent
+
+~/dev ❯ ls /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs                                         09:24:38
+QtConcurrent                libffi.6.dylib              libogg.0.dylib              libssl.1.1.dylib
+QtCore                      libfontconfig.1.dylib       libopencore-amrnb.0.dylib   libswresample.3.5.100.dylib
+QtGui                       libfreetype.6.dylib         libopencore-amrwb.0.dylib   libswscale.5.5.100.dylib
+QtTest                      libgmp.10.dylib             libopenjp2.2.3.1.dylib      libtasn1.6.dylib
+QtWidgets                   libgnutls.30.dylib          libopus.0.dylib             libtheoradec.1.dylib
+libavcodec.58.54.100.dylib  libhogweed.4.5.dylib        libp11-kit.0.dylib          libtheoraenc.1.dylib
+libavformat.58.29.100.dylib libidn2.0.dylib             libpng16.16.dylib           libunistring.2.dylib
+libavresample.4.0.0.dylib   libintl.8.dylib             librtmp.1.dylib             libvorbis.0.dylib
+libavutil.56.31.100.dylib   liblzma.5.dylib             libsnappy.1.1.8.dylib       libvorbisenc.2.dylib
+libbluray.2.dylib           libmp3lame.0.dylib          libsoxr.0.1.2.dylib         libwebp.7.dylib
+libcrypto.1.1.dylib         libnettle.6.5.dylib         libspeex.1.dylib            libwebpmux.3.dylib
+
+~/dev ❯ ls /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore                                  09:24:57
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore
+
+~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore                            09:25:23
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:
+	/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)
+	/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)
+	/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)
+	/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)
+	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)
+	/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)
+	/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)
+	/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+
+~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/cv2.so                                    09:25:35
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/cv2.so:
+	@loader_path/.dylibs/libavcodec.58.54.100.dylib (compatibility version 58.0.0, current version 58.54.100)
+	@loader_path/.dylibs/libavformat.58.29.100.dylib (compatibility version 58.0.0, current version 58.29.100)
+	@loader_path/.dylibs/libavutil.56.31.100.dylib (compatibility version 56.0.0, current version 56.31.100)
+	@loader_path/.dylibs/libswscale.5.5.100.dylib (compatibility version 5.0.0, current version 5.5.100)
+	@loader_path/.dylibs/libavresample.4.0.0.dylib (compatibility version 4.0.0, current version 4.0.0)
+	/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa (compatibility version 1.0.0, current version 22.0.0)
+	/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate (compatibility version 1.0.0, current version 4.0.0)
+	/System/Library/Frameworks/AVFoundation.framework/Versions/A/AVFoundation (compatibility version 1.0.0, current version 2.0.0)
+	/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 1161.10.0)
+	/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo (compatibility version 1.2.0, current version 1.5.0)
+	/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore (compatibility version 1.2.0, current version 1.11.0)
+	@loader_path/.dylibs/QtWidgets (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtGui (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtTest (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtConcurrent (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/.dylibs/QtCore (compatibility version 5.13.0, current version 5.13.2)
+	/System/Library/Frameworks/OpenCL.framework/Versions/A/OpenCL (compatibility version 1.0.0, current version 1.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.50.4)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.0)
+	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1452.23.0)
+	/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1452.23.0)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+
+~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                         09:26:04
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:
+	/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/QtCore (compatibility version 5.13.0, current version 5.13.2)
+	/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)
+	/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)
+	/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+	/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/AGL.framework/Versions/A/AGL (compatibility version 1.0.0, current version 1.0.0)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+
+~/dev ❯ bash                                                                                                               09:26:37
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+
+~/dev  ................................................................ 09:31:47
+❯ cd etc/
+.DS_Store
+2022-02-23 brew upgrade - iTerm2 Session Feb 23, 2022 at 4:07:11 PM.txt
+2022-03-01_console_log_errors_fish_reincubate_relay/
+2022-project-fusion-vercel/
+2022_TaskPaper_scripts/
+athens/
+bypass-paywalls-chrome-master/
+bypass-paywalls-chrome-master.zip
+clj/
+gogs-repositories/
+safair-bookmarks/
+sphere/
+themes/
+willwhitney-live-earth-desktop/
+
+~/dev  ................................................................ 09:31:47
+❯ cd etc/
+.DS_Store
+2022-02-23 brew upgrade - iTerm2 Session Feb 23, 2022 at 4:07:11 PM.txt
+2022-03-01_console_log_errors_fish_reincubate_relay/
+2022-project-fusion-vercel/
+2022_TaskPaper_scripts/
+athens/
+bypass-paywalls-chrome-master/
+bypass-paywalls-chrome-master.zip
+clj/
+gogs-repositories/
+safair-bookmarks/
+sphere/
+themes/
+willwhitney-live-earth-desktop/
+
+~/dev  ................................................................ 09:31:47
+❯ cd etc/willwhitney-live-earth-desktop/
+
+~/dev/etc/willwhitney-live-earth-desktop  .....................................................................  on master 09:31:56
+ ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 python
+.devcontainer/               err.log                      goes-video.py                out.log
+.git/                        goes-east.plist              himawari-example.png         readme.md
+.gitignore                   goes-east.py                 himawari.plist
+2022-04-13_python_setup.log  goes-example.png             himawari.py
+
+~/dev/etc/willwhitney-live-earth-desktop  .....................................................................  on master 09:31:56
+ ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 python
+.devcontainer/               err.log                      goes-video.py                out.log
+.git/                        goes-east.plist              himawari-example.png         readme.md
+.gitignore                   goes-east.py                 himawari.plist
+2022-04-13_python_setup.log  goes-example.png             himawari.py
+
+~/dev/etc/willwhitney-live-earth-desktop  .....................................................................  on master 09:31:56
+ ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 python goes-east.py
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtTest being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+^CTraceback (most recent call last):
+  File "goes-east.py", line 124, in <module>
+    fetch_and_set()
+  File "goes-east.py", line 105, in fetch_and_set
+    download_file(link, tmp)
+  File "goes-east.py", line 62, in download_file
+    for chunk in r.iter_content(chunk_size=1024):
+  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/requests/models.py", line 760, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 579, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read
+    s = self.fp.read(amt)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read
+    data = self._sock.recv(left)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv
+    return self.read(buflen)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read
+    v = self._sslobj.read(len)
+KeyboardInterrupt
+
+~/dev/etc/willwhitney-live-earth-desktop  ..........................................................  on master 11s [ERROR]09:32:23
+ ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_FALLBACK_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/python goes-east.py
+bash: goes-east.py: command not found
+
+~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master [NOTFOUND]09:39:47
+ ❯ l
+total 28040
+-rw-r--r--  1 100ideas  staff   277345 Apr 13 07:53 2022-04-13_python_setup.log
+-rw-r--r--  1 100ideas  staff    15118 Apr 13 09:37 err.log
+-rw-r--r--  1 100ideas  staff     1000 Apr 13 07:58 goes-east.plist
+-rw-r--r--  1 100ideas  staff     3921 Apr 13 08:34 goes-east.py
+-rw-r--r--  1 100ideas  staff  8529177 Apr 13 06:12 goes-example.png
+-rw-r--r--  1 100ideas  staff     3939 Apr 13 06:53 goes-video.py
+-rw-r--r--  1 100ideas  staff  5500882 Apr 13 06:12 himawari-example.png
+-rw-r--r--  1 100ideas  staff      814 Apr 13 06:12 himawari.plist
+-rw-r--r--  1 100ideas  staff     3110 Apr 13 06:12 himawari.py
+-rw-r--r--  1 100ideas  staff      253 Apr 13 09:37 out.log
+-rw-r--r--  1 100ideas  staff     3459 Apr 13 07:46 readme.md
+
+~/dev/etc/willwhitney-live-earth-desktop  .....................................................................  on master 09:39:54
+ ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_FALLBACK_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.py
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtTest being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+... image already downloaded: 20221031610
+:earth_americas: 09:10
+
+~/dev/etc/willwhitney-live-earth-desktop  ..................................................................  on master 2s 09:40:03
+ ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.py
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtTest being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+dyld: warning, LC_RPATH @executable_path/../Frameworks in /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent being ignored in restricted program because of @executable_path (Codesign main executable with Library Validation to allow @ paths)
+c^CTraceback (most recent call last):
+  File "goes-east.py", line 124, in <module>
+    fetch_and_set()
+  File "goes-east.py", line 105, in fetch_and_set
+    download_file(link, tmp)
+  File "goes-east.py", line 62, in download_file
+    for chunk in r.iter_content(chunk_size=1024):
+  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/requests/models.py", line 760, in generate
+    for chunk in self.raw.stream(chunk_size, decode_content=True):
+  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 579, in stream
+    data = self.read(amt=amt, decode_content=decode_content)
+  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read
+    data = self._fp.read(amt) if not fp_closed else b""
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read
+    s = self.fp.read(amt)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read
+    data = self._sock.recv(left)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv
+    return self.read(buflen)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read
+    v = self._sslobj.read(len)
+KeyboardInterrupt
+
+~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08
+ ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye
+
+~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59
+ ❯ exit
+exit
+
+~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:
+	/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)
+	/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)
+	/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)
+	/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)
+	/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)
+	/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)
+	/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)
+	/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+
+
+~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets            09:46:19
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:
+	/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)
+	@loader_path/QtCore (compatibility version 5.13.0, current version 5.13.2)
+	/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)
+	/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)
+	/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+	/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL (compatibility version 1.0.0, current version 1.0.0)
+	/System/Library/Frameworks/AGL.framework/Versions/A/AGL (compatibility version 1.0.0, current version 1.0.0)
+	/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)
+	/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+
+~/dev ❯ otool -l /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets           09:46:45
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:
+Load command 0
+      cmd LC_SEGMENT_64
+  cmdsize 712
+  segname __TEXT
+   vmaddr 0x0000000000000000
+   vmsize 0x000000000043f000
+  fileoff 0
+ filesize 4452352
+  maxprot 0x00000007
+ initprot 0x00000005
+   nsects 8
+    flags 0x0
+Section
+  sectname __text
+   segname __TEXT
+      addr 0x0000000000004490
+      size 0x00000000003ae21a
+    offset 17552
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x80000400
+ reserved1 0
+ reserved2 0
+Section
+  sectname __stubs
+   segname __TEXT
+      addr 0x00000000003b26aa
+      size 0x0000000000003468
+    offset 3876522
+     align 2^1 (2)
+    reloff 0
+    nreloc 0
+     flags 0x80000408
+ reserved1 0 (index into indirect symbol table)
+ reserved2 6 (size of stubs)
+Section
+  sectname __stub_helper
+   segname __TEXT
+      addr 0x00000000003b5b14
+      size 0x000000000000572c
+    offset 3889940
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x80000400
+ reserved1 0
+ reserved2 0
+Section
+  sectname __cstring
+   segname __TEXT
+      addr 0x00000000003bb240
+      size 0x000000000000eb72
+    offset 3912256
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+     flags 0x00000002
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __TEXT
+      addr 0x00000000003c9dc0
+      size 0x000000000006c149
+    offset 3972544
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __gcc_except_tab
+   segname __TEXT
+      addr 0x0000000000435f0c
+      size 0x000000000000027c
+    offset 4415244
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_methname
+   segname __TEXT
+      addr 0x0000000000436188
+      size 0x0000000000000024
+    offset 4415880
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+     flags 0x00000002
+ reserved1 0
+ reserved2 0
+Section
+  sectname __unwind_info
+   segname __TEXT
+      addr 0x00000000004361ac
+      size 0x0000000000008e54
+    offset 4415916
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Load command 1
+      cmd LC_SEGMENT_64
+  cmdsize 872
+  segname __DATA
+   vmaddr 0x000000000043f000
+   vmsize 0x0000000000054000
+  fileoff 4452352
+ filesize 344064
+  maxprot 0x00000007
+ initprot 0x00000003
+   nsects 10
+    flags 0x0
+Section
+  sectname __nl_symbol_ptr
+   segname __DATA
+      addr 0x000000000043f000
+      size 0x0000000000000010
+    offset 4452352
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 2236 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __got
+   segname __DATA
+      addr 0x000000000043f010
+      size 0x00000000000003a8
+    offset 4452368
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 2238 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __la_symbol_ptr
+   segname __DATA
+      addr 0x000000000043f3b8
+      size 0x00000000000045e0
+    offset 4453304
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000007
+ reserved1 2355 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __mod_init_func
+   segname __DATA
+      addr 0x0000000000443998
+      size 0x0000000000000030
+    offset 4471192
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000009
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __DATA
+      addr 0x00000000004439d0
+      size 0x000000000002c1f8
+    offset 4471248
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_imageinfo
+   segname __DATA
+      addr 0x000000000046fbc8
+      size 0x0000000000000008
+    offset 4651976
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_selrefs
+   segname __DATA
+      addr 0x000000000046fbd0
+      size 0x0000000000000018
+    offset 4651984
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x10000005
+ reserved1 0
+ reserved2 0
+Section
+  sectname __data
+   segname __DATA
+      addr 0x000000000046fbe8
+      size 0x0000000000022d80
+    offset 4652008
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __common
+   segname __DATA
+      addr 0x0000000000492968
+      size 0x0000000000000130
+    offset 0
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Section
+  sectname __bss
+   segname __DATA
+      addr 0x0000000000492aa0
+      size 0x000000000000046c
+    offset 0
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Load command 2
+      cmd LC_SEGMENT_64
+  cmdsize 72
+  segname __LINKEDIT
+   vmaddr 0x0000000000493000
+   vmsize 0x000000000010e394
+  fileoff 4796416
+ filesize 1106836
+  maxprot 0x00000007
+ initprot 0x00000001
+   nsects 0
+    flags 0x0
+Load command 3
+          cmd LC_ID_DYLIB
+      cmdsize 48
+         name /DLC/cv2/QtWidgets (offset 24)
+   time stamp 1 Wed Dec 31 16:00:01 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 4
+            cmd LC_DYLD_INFO_ONLY
+        cmdsize 48
+     rebase_off 4796416
+    rebase_size 4416
+       bind_off 4800832
+      bind_size 22808
+  weak_bind_off 4823640
+ weak_bind_size 688
+  lazy_bind_off 4824328
+ lazy_bind_size 100080
+     export_off 4924408
+    export_size 296296
+Load command 5
+     cmd LC_SYMTAB
+ cmdsize 24
+  symoff 5245184
+   nsyms 11320
+  stroff 5444668
+ strsize 458584
+Load command 6
+            cmd LC_DYSYMTAB
+        cmdsize 80
+      ilocalsym 0
+      nlocalsym 1
+     iextdefsym 1
+     nextdefsym 8787
+      iundefsym 8788
+      nundefsym 2532
+         tocoff 0
+           ntoc 0
+      modtaboff 0
+        nmodtab 0
+   extrefsymoff 0
+    nextrefsyms 0
+ indirectsymoff 5426304
+  nindirectsyms 4591
+      extreloff 0
+        nextrel 0
+      locreloff 0
+        nlocrel 0
+Load command 7
+     cmd LC_UUID
+ cmdsize 24
+    uuid 3A605C49-75C9-3FB6-AB17-850EE358546D
+Load command 8
+      cmd LC_VERSION_MIN_MACOSX
+  cmdsize 16
+  version 10.12
+      sdk 10.14
+Load command 9
+      cmd LC_SOURCE_VERSION
+  cmdsize 16
+  version 0.0
+Load command 10
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name @loader_path/QtGui (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 11
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name @loader_path/QtCore (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 12
+          cmd LC_LOAD_DYLIB
+      cmdsize 104
+         name /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 13
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 275.0.0
+compatibility version 1.0.0
+Load command 14
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1671.10.106
+compatibility version 45.0.0
+Load command 15
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name /usr/lib/libz.1.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.2.11
+compatibility version 1.0.0
+Load command 16
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 17
+          cmd LC_LOAD_DYLIB
+      cmdsize 80
+         name /System/Library/Frameworks/AGL.framework/Versions/A/AGL (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 18
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name /usr/lib/libc++.1.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 400.9.4
+compatibility version 1.0.0
+Load command 19
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libSystem.B.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1252.200.5
+compatibility version 1.0.0
+Load command 20
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libobjc.A.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 228.0.0
+compatibility version 1.0.0
+Load command 21
+          cmd LC_RPATH
+      cmdsize 48
+         path @executable_path/../Frameworks (offset 12)
+Load command 22
+          cmd LC_RPATH
+      cmdsize 40
+         path @loader_path/Frameworks (offset 12)
+Load command 23
+      cmd LC_FUNCTION_STARTS
+  cmdsize 16
+  dataoff 5220704
+ datasize 20856
+Load command 24
+      cmd LC_DATA_IN_CODE
+  cmdsize 16
+  dataoff 5241560
+ datasize 3624
+
+~/dev ❯ install_name_tool -rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/      09:47:23
+Usage: /Library/Developer/CommandLineTools/usr/bin/install_name_tool [-change old new] ... [-rpath old new] ... [-add_rpath new] ... [-delete_rpath old] ... [-id name] input
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)    [ERROR]09:51:22
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exit
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00
+
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)
+
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtCore (compatibility version 5.13.0, current version 5.13.2)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)
+fish: Unsupported use of '='. In fish, please use 'set decode_content decode_content'.
+
+~/dev ❯     data = self.read(amt=amt, decode_content=decode_content)  File "/Users/100ideas/Library/Python/2.7/lib/python/site-packages/urllib3/response.py", line 522, in read    data = self._fp.read(amt) if not fp_closed else b""  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/httplib.py", line 601, in read    s = self.fp.read(amt)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 384, in read    data = self._sock.recv(left)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 754, in recv    return self.read(buflen)  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/ssl.py", line 641, in read    v = self._sslobj.read(len)KeyboardInterrupt~/dev/etc/willwhitney-live-earth-desktop  ...........................................................  on master 3s [ERROR]09:41:08 ❯ DYLD_PRINT_RPATHS=1 DYLD_PRINT_LIBRARIES=1 DYLD_LIBRARY_PATH=/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ python goes-east.pye~/dev/etc/willwhitney-live-earth-desktop  ..............................................................  on master [ERROR]09:45:59 ❯ exitexit~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore              14m12s [ERROR]09:46:00/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore:/DLC/cv2/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.200.5)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/System/Library/Frameworks/Security.framework/Versions/A/Security (compatibility version 1.0.0, current version 58286.220.15)/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (compatibility version 1.0.0, current version 50.1.0)/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices (compatibility version 1.0.0, current version 934.0.0)/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 1560.12.0)/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 1560.12.0)/usr/lib/libz.1.dylib (compatibility version 1.0.0, current version 1.2.11)/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.4)/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)~/dev ❯ otool -L /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets                                            09:46:19/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:/DLC/cv2/QtWidgets (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtGui (compatibility version 5.13.0, current version 5.13.2)@loader_path/QtCore (compatibility version 5.13.0, current version 5.13.2)/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (compatibility version 1.0.0, current version 1.0.0)/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (compatibility version 1.0.0, current version 275.0.0)/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (compatibility version 45.0.0, current version 1671.10.106)/usr/lib/libz.1.dylib (compatibility versioc^C
+
+~/dev ❯ install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets
+
+~/dev ❯ otool -l /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets           09:52:29
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtWidgets:
+Load command 0
+      cmd LC_SEGMENT_64
+  cmdsize 712
+  segname __TEXT
+   vmaddr 0x0000000000000000
+   vmsize 0x000000000043f000
+  fileoff 0
+ filesize 4452352
+  maxprot 0x00000007
+ initprot 0x00000005
+   nsects 8
+    flags 0x0
+Section
+  sectname __text
+   segname __TEXT
+      addr 0x0000000000004490
+      size 0x00000000003ae21a
+    offset 17552
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x80000400
+ reserved1 0
+ reserved2 0
+Section
+  sectname __stubs
+   segname __TEXT
+      addr 0x00000000003b26aa
+      size 0x0000000000003468
+    offset 3876522
+     align 2^1 (2)
+    reloff 0
+    nreloc 0
+     flags 0x80000408
+ reserved1 0 (index into indirect symbol table)
+ reserved2 6 (size of stubs)
+Section
+  sectname __stub_helper
+   segname __TEXT
+      addr 0x00000000003b5b14
+      size 0x000000000000572c
+    offset 3889940
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x80000400
+ reserved1 0
+ reserved2 0
+Section
+  sectname __cstring
+   segname __TEXT
+      addr 0x00000000003bb240
+      size 0x000000000000eb72
+    offset 3912256
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+     flags 0x00000002
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __TEXT
+      addr 0x00000000003c9dc0
+      size 0x000000000006c149
+    offset 3972544
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __gcc_except_tab
+   segname __TEXT
+      addr 0x0000000000435f0c
+      size 0x000000000000027c
+    offset 4415244
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_methname
+   segname __TEXT
+      addr 0x0000000000436188
+      size 0x0000000000000024
+    offset 4415880
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+     flags 0x00000002
+ reserved1 0
+ reserved2 0
+Section
+  sectname __unwind_info
+   segname __TEXT
+      addr 0x00000000004361ac
+      size 0x0000000000008e54
+    offset 4415916
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Load command 1
+      cmd LC_SEGMENT_64
+  cmdsize 872
+  segname __DATA
+   vmaddr 0x000000000043f000
+   vmsize 0x0000000000054000
+  fileoff 4452352
+ filesize 344064
+  maxprot 0x00000007
+ initprot 0x00000003
+   nsects 10
+    flags 0x0
+Section
+  sectname __nl_symbol_ptr
+   segname __DATA
+      addr 0x000000000043f000
+      size 0x0000000000000010
+    offset 4452352
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 2236 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __got
+   segname __DATA
+      addr 0x000000000043f010
+      size 0x00000000000003a8
+    offset 4452368
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 2238 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __la_symbol_ptr
+   segname __DATA
+      addr 0x000000000043f3b8
+      size 0x00000000000045e0
+    offset 4453304
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000007
+ reserved1 2355 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __mod_init_func
+   segname __DATA
+      addr 0x0000000000443998
+      size 0x0000000000000030
+    offset 4471192
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000009
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __DATA
+      addr 0x00000000004439d0
+      size 0x000000000002c1f8
+    offset 4471248
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_imageinfo
+   segname __DATA
+      addr 0x000000000046fbc8
+      size 0x0000000000000008
+    offset 4651976
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_selrefs
+   segname __DATA
+      addr 0x000000000046fbd0
+      size 0x0000000000000018
+    offset 4651984
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x10000005
+ reserved1 0
+ reserved2 0
+Section
+  sectname __data
+   segname __DATA
+      addr 0x000000000046fbe8
+      size 0x0000000000022d80
+    offset 4652008
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __common
+   segname __DATA
+      addr 0x0000000000492968
+      size 0x0000000000000130
+    offset 0
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Section
+  sectname __bss
+   segname __DATA
+      addr 0x0000000000492aa0
+      size 0x000000000000046c
+    offset 0
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Load command 2
+      cmd LC_SEGMENT_64
+  cmdsize 72
+  segname __LINKEDIT
+   vmaddr 0x0000000000493000
+   vmsize 0x000000000010e394
+  fileoff 4796416
+ filesize 1106836
+  maxprot 0x00000007
+ initprot 0x00000001
+   nsects 0
+    flags 0x0
+Load command 3
+          cmd LC_ID_DYLIB
+      cmdsize 48
+         name /DLC/cv2/QtWidgets (offset 24)
+   time stamp 1 Wed Dec 31 16:00:01 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 4
+            cmd LC_DYLD_INFO_ONLY
+        cmdsize 48
+     rebase_off 4796416
+    rebase_size 4416
+       bind_off 4800832
+      bind_size 22808
+  weak_bind_off 4823640
+ weak_bind_size 688
+  lazy_bind_off 4824328
+ lazy_bind_size 100080
+     export_off 4924408
+    export_size 296296
+Load command 5
+     cmd LC_SYMTAB
+ cmdsize 24
+  symoff 5245184
+   nsyms 11320
+  stroff 5444668
+ strsize 458584
+Load command 6
+            cmd LC_DYSYMTAB
+        cmdsize 80
+      ilocalsym 0
+      nlocalsym 1
+     iextdefsym 1
+     nextdefsym 8787
+      iundefsym 8788
+      nundefsym 2532
+         tocoff 0
+           ntoc 0
+      modtaboff 0
+        nmodtab 0
+   extrefsymoff 0
+    nextrefsyms 0
+ indirectsymoff 5426304
+  nindirectsyms 4591
+      extreloff 0
+        nextrel 0
+      locreloff 0
+        nlocrel 0
+Load command 7
+     cmd LC_UUID
+ cmdsize 24
+    uuid 3A605C49-75C9-3FB6-AB17-850EE358546D
+Load command 8
+      cmd LC_VERSION_MIN_MACOSX
+  cmdsize 16
+  version 10.12
+      sdk 10.14
+Load command 9
+      cmd LC_SOURCE_VERSION
+  cmdsize 16
+  version 0.0
+Load command 10
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name @loader_path/QtGui (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 11
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name @loader_path/QtCore (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 12
+          cmd LC_LOAD_DYLIB
+      cmdsize 104
+         name /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 13
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 275.0.0
+compatibility version 1.0.0
+Load command 14
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1671.10.106
+compatibility version 45.0.0
+Load command 15
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name /usr/lib/libz.1.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.2.11
+compatibility version 1.0.0
+Load command 16
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 17
+          cmd LC_LOAD_DYLIB
+      cmdsize 80
+         name /System/Library/Frameworks/AGL.framework/Versions/A/AGL (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 18
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name /usr/lib/libc++.1.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 400.9.4
+compatibility version 1.0.0
+Load command 19
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libSystem.B.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1252.200.5
+compatibility version 1.0.0
+Load command 20
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libobjc.A.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 228.0.0
+compatibility version 1.0.0
+Load command 21
+          cmd LC_RPATH
+      cmdsize 88
+         path /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ (offset 12)
+Load command 22
+          cmd LC_RPATH
+      cmdsize 40
+         path @loader_path/Frameworks (offset 12)
+Load command 23
+      cmd LC_FUNCTION_STARTS
+  cmdsize 16
+  dataoff 5220704
+ datasize 20856
+Load command 24
+      cmd LC_DATA_IN_CODE
+  cmdsize 16
+  dataoff 5241560
+ datasize 3624
+
+
+~/dev ❯ install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/{QtGui,QtCore,QtTest,QtConcurrent}
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: more than one input file specified (/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore and /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui)
+Usage: /Library/Developer/CommandLineTools/usr/bin/install_name_tool [-change old new] ... [-rpath old new] ... [-add_rpath new] ... [-delete_rpath old] ... [-id name] input
+
+~/dev ❯ install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/{QtGui,QtCore,QtTest,QtConcurrent}^C
+
+~/dev ❯ for pa in QtGui QtCore QtTest QtConcurrent                                                                  [ERROR]09:54:38
+            ^C
+
+~/dev ❯ for pa in QtGui QtCore QtTest QtConcurrent                                                                  [ERROR]09:54:38
+              install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/$pa
+        end
+
+~/dev ❯ for pa in QtGui QtCore QtTest QtConcurrent                                                                         09:57:40
+              echo $PA # install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/$pa
+        end
+
+
+
+
+
+~/dev ❯ for pa in QtGui QtCore QtTest QtConcurrent                                                                         09:58:12
+              echo $pa # install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/$pa
+        end
+QtGui
+QtCore
+QtTest
+QtConcurrent
+
+~/dev ❯ for pa in QtGui QtCore QtTest QtConcurrent; install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/$pa; end
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtTest (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+
+~/dev ❯ otool -l /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui                      [ERROR]09:58:50
+/Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui:
+Load command 0
+      cmd LC_SEGMENT_64
+  cmdsize 712
+  segname __TEXT
+   vmaddr 0x0000000000000000
+   vmsize 0x0000000000450000
+  fileoff 0
+ filesize 4521984
+  maxprot 0x00000007
+ initprot 0x00000005
+   nsects 8
+    flags 0x0
+Section
+  sectname __text
+   segname __TEXT
+      addr 0x0000000000005c80
+      size 0x00000000003f6690
+    offset 23680
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x80000400
+ reserved1 0
+ reserved2 0
+Section
+  sectname __stubs
+   segname __TEXT
+      addr 0x00000000003fc310
+      size 0x00000000000018ba
+    offset 4178704
+     align 2^1 (2)
+    reloff 0
+    nreloc 0
+     flags 0x80000408
+ reserved1 0 (index into indirect symbol table)
+ reserved2 6 (size of stubs)
+Section
+  sectname __stub_helper
+   segname __TEXT
+      addr 0x00000000003fdbcc
+      size 0x000000000000286a
+    offset 4185036
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x80000400
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __TEXT
+      addr 0x0000000000400440
+      size 0x00000000000305d4
+    offset 4195392
+     align 2^5 (32)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __cstring
+   segname __TEXT
+      addr 0x0000000000430a20
+      size 0x000000000001827d
+    offset 4393504
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000002
+ reserved1 0
+ reserved2 0
+Section
+  sectname __gcc_except_tab
+   segname __TEXT
+      addr 0x0000000000448ca0
+      size 0x0000000000000690
+    offset 4492448
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_methname
+   segname __TEXT
+      addr 0x0000000000449330
+      size 0x00000000000001c1
+    offset 4494128
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+     flags 0x00000002
+ reserved1 0
+ reserved2 0
+Section
+  sectname __unwind_info
+   segname __TEXT
+      addr 0x00000000004494f4
+      size 0x0000000000006af0
+    offset 4494580
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Load command 1
+      cmd LC_SEGMENT_64
+  cmdsize 1032
+  segname __DATA
+   vmaddr 0x0000000000450000
+   vmsize 0x0000000000030000
+  fileoff 4521984
+ filesize 167936
+  maxprot 0x00000007
+ initprot 0x00000003
+   nsects 12
+    flags 0x0
+Section
+  sectname __nl_symbol_ptr
+   segname __DATA
+      addr 0x0000000000450000
+      size 0x0000000000000010
+    offset 4521984
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 1055 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __got
+   segname __DATA
+      addr 0x0000000000450010
+      size 0x0000000000000310
+    offset 4522000
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000006
+ reserved1 1057 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __la_symbol_ptr
+   segname __DATA
+      addr 0x0000000000450320
+      size 0x00000000000020f8
+    offset 4522784
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000007
+ reserved1 1155 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __mod_init_func
+   segname __DATA
+      addr 0x0000000000452418
+      size 0x0000000000000048
+    offset 4531224
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000009
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __DATA
+      addr 0x0000000000452460
+      size 0x000000000000ee40
+    offset 4531296
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __cfstring
+   segname __DATA
+      addr 0x00000000004612a0
+      size 0x00000000000001a0
+    offset 4592288
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_imageinfo
+   segname __DATA
+      addr 0x0000000000461440
+      size 0x0000000000000008
+    offset 4592704
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_selrefs
+   segname __DATA
+      addr 0x0000000000461448
+      size 0x00000000000000c0
+    offset 4592712
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x10000005
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_classrefs
+   segname __DATA
+      addr 0x0000000000461508
+      size 0x0000000000000018
+    offset 4592904
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+     flags 0x10000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __data
+   segname __DATA
+      addr 0x0000000000461520
+      size 0x00000000000175b8
+    offset 4592928
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000000
+ reserved1 0
+ reserved2 0
+Section
+  sectname __bss
+   segname __DATA
+      addr 0x0000000000478ae0
+      size 0x0000000000001420
+    offset 0
+     align 2^5 (32)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Section
+  sectname __common
+   segname __DATA
+      addr 0x0000000000479f00
+      size 0x00000000000052c4
+    offset 0
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+     flags 0x00000001
+ reserved1 0
+ reserved2 0
+Load command 2
+      cmd LC_SEGMENT_64
+  cmdsize 72
+  segname __LINKEDIT
+   vmaddr 0x0000000000480000
+   vmsize 0x00000000000d4218
+  fileoff 4689920
+ filesize 868888
+  maxprot 0x00000007
+ initprot 0x00000001
+   nsects 0
+    flags 0x0
+Load command 3
+          cmd LC_ID_DYLIB
+      cmdsize 40
+         name /DLC/cv2/QtGui (offset 24)
+   time stamp 1 Wed Dec 31 16:00:01 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 4
+            cmd LC_DYLD_INFO_ONLY
+        cmdsize 48
+     rebase_off 4689920
+    rebase_size 2296
+       bind_off 4692216
+      bind_size 6512
+  weak_bind_off 4698728
+ weak_bind_size 7392
+  lazy_bind_off 4706120
+ lazy_bind_size 40224
+     export_off 4746344
+    export_size 263864
+Load command 5
+     cmd LC_SYMTAB
+ cmdsize 24
+  symoff 5030504
+   nsyms 9118
+  stroff 5185232
+ strsize 373576
+Load command 6
+            cmd LC_DYSYMTAB
+        cmdsize 80
+      ilocalsym 0
+      nlocalsym 1
+     iextdefsym 1
+     nextdefsym 7989
+      iundefsym 7990
+      nundefsym 1128
+         tocoff 0
+           ntoc 0
+      modtaboff 0
+        nmodtab 0
+   extrefsymoff 0
+    nextrefsyms 0
+ indirectsymoff 5176392
+  nindirectsyms 2210
+      extreloff 0
+        nextrel 0
+      locreloff 0
+        nlocrel 0
+Load command 7
+     cmd LC_UUID
+ cmdsize 24
+    uuid 765903F6-24C7-3235-9744-2E2B161A611F
+Load command 8
+      cmd LC_VERSION_MIN_MACOSX
+  cmdsize 16
+  version 10.12
+      sdk 10.14
+Load command 9
+      cmd LC_SOURCE_VERSION
+  cmdsize 16
+  version 0.0
+Load command 10
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name @loader_path/QtCore (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 5.13.2
+compatibility version 5.13.0
+Load command 11
+          cmd LC_LOAD_DYLIB
+      cmdsize 104
+         name /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 12
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 275.0.0
+compatibility version 1.0.0
+Load command 13
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1671.10.106
+compatibility version 45.0.0
+Load command 14
+          cmd LC_LOAD_DYLIB
+      cmdsize 104
+         name /System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1247.4.1
+compatibility version 64.0.0
+Load command 15
+          cmd LC_LOAD_DYLIB
+      cmdsize 96
+         name /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1560.12.0
+compatibility version 300.0.0
+Load command 16
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 17
+          cmd LC_LOAD_DYLIB
+      cmdsize 80
+         name /System/Library/Frameworks/AGL.framework/Versions/A/AGL (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 18
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name /usr/lib/libz.1.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.2.11
+compatibility version 1.0.0
+Load command 19
+          cmd LC_LOAD_DYLIB
+      cmdsize 112
+         name /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 50.1.0
+compatibility version 1.0.0
+Load command 20
+          cmd LC_LOAD_DYLIB
+      cmdsize 48
+         name /usr/lib/libc++.1.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 400.9.4
+compatibility version 1.0.0
+Load command 21
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libSystem.B.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1252.200.5
+compatibility version 1.0.0
+Load command 22
+          cmd LC_LOAD_DYLIB
+      cmdsize 104
+         name /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1560.12.0
+compatibility version 150.0.0
+Load command 23
+          cmd LC_LOAD_DYLIB
+      cmdsize 96
+         name /System/Library/Frameworks/CoreText.framework/Versions/A/CoreText (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 1.0.0
+compatibility version 1.0.0
+Load command 24
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libobjc.A.dylib (offset 24)
+   time stamp 2 Wed Dec 31 16:00:02 1969
+      current version 228.0.0
+compatibility version 1.0.0
+Load command 25
+          cmd LC_RPATH
+      cmdsize 88
+         path /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ (offset 12)
+Load command 26
+          cmd LC_RPATH
+      cmdsize 40
+         path @loader_path/Frameworks (offset 12)
+Load command 27
+      cmd LC_FUNCTION_STARTS
+  cmdsize 16
+  dataoff 5010208
+ datasize 17784
+Load command 28
+      cmd LC_DATA_IN_CODE
+  cmdsize 16
+  dataoff 5027992
+ datasize 2512
+
+~/dev ❯ mkdir ~/Pictures/live-earth-desktop/images                                                                         09:59:23
+
+
