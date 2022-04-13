@@ -110,6 +110,7 @@ Will Bresnahan (https://github.com/n9Mtq4)has shared some even smoother timelaps
 **very interesting**: https://github.com/celoyd/hi8 - repo that generates "https://glittering.blue" movies from himawari-8 raw data.
 
 check out
+- **https://github.com/domoritz/himawari-8-chrome**
 - original repo https://github.com/celoyd/hi8
 - https://github.com/n9Mtq4/NOAA-GOES-Image-Scraper
 - https://github.com/100ideas/live-earth-desktop
