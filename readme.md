@@ -2,10 +2,41 @@
 
 ## INSTALL LOG (100ideas)
 
-using system default python2.7
+using system default python2.7, osx 11.6
+
+**install listed and unlisted deps**
+```shell
+# get pip
+curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python
+
+# install deps to global python2 location... gross
+python -m pip install requests lxml html5lib Pillow pytz tzlocal bs4
+
+# need opencv (for cv2 python package, see details below)
+brew install opencv@2
+python -m pip install scikit-image
+```
+*note*: see full shell log if I forgot one of the packages that slipped by... `./CMD_LOG 2022-04-13_python_setup.log`
+
+**ok.... now we need cv2 python package**
+... its pythong opencv bindings... so we need opencv that works w python2.7...
+    https://gist.github.com/shinsumicco/52bfcabeccb0290348feee48cd5dcdb9
+
+... the gist suggests an involved compile from src w/ flags for oldy python...
+
+... **gonna just try `brew install opencv@2` instead**...
+```shell 
+brew install opencv@2
+python -m pip pip install opencv-python==4.2.0.32
+```
+
+edit output paths in `goes-east.py` as described by original readme below, then test install with
+`python goes-east.py`
 
 consider putting these requirements in a `requirements.txt` for pip... see here
 - https://pip.pypa.io/en/stable/user_guide/#requirements-files
+- ok generated it
+
 ```shell
 # generate requirements file
 ~/dev/etc/willwhitney-live-earth-desktop ❯ python -m pip freeze --all > requirements.txt
@@ -14,27 +45,44 @@ consider putting these requirements in a `requirements.txt` for pip... see here
 python -m pip install -r requirements.txt
 ```
 
-```shell
-curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python
+on my system the script worked (eventually), but the system complained a lot on stderr about dynamic linking going on in qtkit libs (ughhh why do we even install qtkit for the love of god). It was bothering, found a fix that works for my system, at least, and placates the system linker that was complaining on security grounds...
 
-python -m pip install requests lxml html5lib
-python -m pip install scikit-image
-python -m pip pip install opencv-python==4.2.0.32
-```
-
-need to install opencv-python and cv2
-
-... which needs opencv binary library to be added to python.. see gist
-https://gist.github.com/shinsumicco/52bfcabeccb0290348feee48cd5dcdb9
-
-... the gist suggests an involved compile from src w/ flags for oldy python...
-
-... gonna just try `brew install opencv@2` instead
-
-
-fixing dyld warnings: 
+fixing dyld warnings, backround reading:
 - https://medium.com/@donblas/fun-with-rpath-otool-and-install-name-tool-e3e41ae86172
 - https://itwenty.me/2020/07/understanding-dyld-executable_path-loader_path-and-rpath/
+
+```
+# shell log in `CMD_LOG - patch Qt binaries to avoid using relative rpath in dynamic linker.log`
+
+~/dev ❯ for pa in QtGui QtCore QtTest QtWidgets QtConcurrent
+              echo $pa # install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/$pa
+        end
+QtGui
+QtCore
+QtTest
+QtWidgets
+QtConcurrent
+
+~/dev ❯ for pa in QtGui QtCore QtTest QtConcurrent QtWidgets; install_name_tool -rpath '@executable_path/../Frameworks' /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/ /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/$pa; end
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtGui (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtCore (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtTest (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+error: /Library/Developer/CommandLineTools/usr/bin/install_name_tool: no LC_RPATH load command with path: @executable_path/../Frameworks found in: /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/QtConcurrent (for architecture x86_64), required for specified option "-rpath @executable_path/../Frameworks /Users/100ideas/Library/Python/2.7/lib/python/site-packages/cv2/.dylibs/"
+
+# now try python goes-east.py and check `err.log` to see if complaints have been silenced
+```
+
+
+## TODOs 
+- switch to python3
+  - tidy up install process and use virtualenv 
+  - ditch/replace bloat deps like cv2 (opencv for jpg stitching and saving ugh)
+- or deno/node 
+  - https://github.com/jeremiak/noaa-goes-east-image-scraper/blob/master/scrape.js
+- use apple automations / applescript / or some system api to directly control screensaver / background
+- refactor hardcoded config strings (paths) into config vars
+- maybe port over to serverless architecture + s3, provide proxy?
+- 
 
 ---
 
