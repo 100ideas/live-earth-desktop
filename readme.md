@@ -6,6 +6,13 @@ using system default python2.7
 
 consider putting these requirements in a `requirements.txt` for pip... see here
 - https://pip.pypa.io/en/stable/user_guide/#requirements-files
+```shell
+# generate requirements file
+~/dev/etc/willwhitney-live-earth-desktop ❯ python -m pip freeze --all > requirements.txt
+
+# then install from it in another environment.
+python -m pip install -r requirements.txt
+```
 
 ```shell
 curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python
@@ -13,10 +20,6 @@ curl https://bootstrap.pypa.io/pip/2.7/get-pip.py | python
 python -m pip install requests lxml html5lib
 python -m pip install scikit-image
 python -m pip pip install opencv-python==4.2.0.32
-
-
-
-
 ```
 
 need to install opencv-python and cv2
@@ -28,6 +31,10 @@ https://gist.github.com/shinsumicco/52bfcabeccb0290348feee48cd5dcdb9
 
 ... gonna just try `brew install opencv@2` instead
 
+
+fixing dyld warnings: 
+- https://medium.com/@donblas/fun-with-rpath-otool-and-install-name-tool-e3e41ae86172
+- https://itwenty.me/2020/07/understanding-dyld-executable_path-loader_path-and-rpath/
 
 ---
 
